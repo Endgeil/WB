@@ -18,10 +18,13 @@ Alter 13-17 // Cola
 
 let eingabeAge,eingabeName;
 eingabeName = prompt("Bitte geben Sie Ihren Namen ein");
-eingabeAge = prompt("Bitte geben Sie Ihr Alter ein");
+eingabeAge = parseInt(prompt("Bitte geben Sie Ihr Alter ein"));
 
-/*
+
 switch (true) {
+    case (eingabeAge < 0):
+        console.log("Bitte geben Sie einen richtiges alter ein!");
+        break;
     case (eingabeAge < 6):
         console.log(eingabeName + " bekommt Milch!");
         break;
@@ -35,9 +38,9 @@ switch (true) {
         console.log(eingabeName + " bekommt Bier!");
         break;
 }
-*/
 
 
+/*
 if ((eingabeAge > 0) && (eingabeAge <6)) 
 {
     console.log(eingabeName + " bekommt Milch!");
@@ -53,6 +56,5 @@ else if ((eingabeAge > 12) && (eingabeAge < 18))
 else {
     console.log(eingabeName + " bekommt Bier!");
 }
-
-
+*/
 
