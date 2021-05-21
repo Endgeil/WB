@@ -76,12 +76,12 @@ function ausgabeNamenParams(firstName, familyName) {
 /***** Funktion 03b *****/
 
 /*** Job: String zusammensetzen ***/
-//output(getString(prompt("Bitte Vornamen eingeben"), prompt("Bitte Namen eingeben")));
+output(getString(prompt("Bitte Vornamen eingeben"), prompt("Bitte Namen eingeben")));
 function getString(firstName, familyName) {
     let gap = " ";
     let outputStr = "Hallo " + firstName + gap + familyName + "!";
     return outputStr; // Daten ----> an die Stelle des calls
-    console.log("huhu"); // nach return wird die Funktion abgebrochen
+    //console.log("huhu"); // nach return wird die Funktion abgebrochen
 }
 
 /*** 2. Job: output ***/
