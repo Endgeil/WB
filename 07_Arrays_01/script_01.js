@@ -22,12 +22,82 @@
 // }
 
 /* For-Schleife für Array-Index (Iteration) */
-let arr = ["Ich "+"bin "+"der "+"coole "+"Max "+"Mütze"+"!"];
-for (let i = 0; i < arr.length; i++) {
-        ausgabe(arr[i]);
+// let arr = ["Ich "+"bin "+"der "+"coole "+"Max "+"Mütze"+"!"];
+// for (let i = 0; i < arr.length; i++) {
+//         ausgabe(arr[i]);
+// }
+
+/******* Überlegung ********/
+
+/*
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Aufsummierung
+*/
+
+/* Zu "Fuß" - DRY !!! */
+// let a = 0; // Anfangswert
+// ausgabe("inhalt von a: " + a);
+// a = a +1; // a = 0 + 1
+// ausgabe("inhalt von a: " + a);
+// a = a +1; // a = 0 + 1
+// ausgabe("inhalt von a: " + a);
+// a = a +1; // a = 0 + 1
+// ausgabe("inhalt von a: " + a);
+
+/* Besser: mit FOR-Schleife */
+// let a = 0; // Anfangswert
+// for (let i = 0; i < 5; i++) {
+//     ausgabe("ausgabe aus der loop :" + a);
+//     a = a + 1;
+// }
+
+// ausgabe("ausgabe nach der loop :" + a);
+
+
+/*
+1. Einer Variablen kann Ihr eigener Wert zugewiesen werden.
+Solange die Variable existiert, bleibt dieser erhalten.
+hier: Konkatenation eines Strings
+*/
+
+// let str = ""; // Anfangswert
+// let addStr = "Test";
+// let gap = " ";
+// let punkt = ".";
+
+// for (let i = 0; i < 5; i++) {
+//     str += addStr + gap;
+// }
+// ausgabe(str += punkt);
+
+
+
+
+
+/**** 02b. Funktionalität mit Array 2 *****/
+
+ausgabe(getSentenceArr2(["Ich","bin"]));
+ausgabe(getSentenceArr2(["Ich","bin","Max","Mütze"])); // Test
+ausgabe(getSentenceArr2(["Ich","bin","der","coole","Max","Mütze"]));
+function getSentenceArr2(arr) {
+    let str = "";
+    let gap = " ";
+    let punkt = ".";
+
+    for (let i = 0; i < arr.length; i++) {
+        if (i != arr.length-1) {
+            str += arr[i] + gap;
+        } else {
+            str += arr[i] + punkt;
+        }
+
+    }
+    return str;
 }
 
-/**** 02a. Funktionalität mit Array *****/
+
+/**** 02a. Funktionalität mit Array 1 *****/
 // Kritik | Überlegung
 // word1,word2, ....word100 :: Semantische Struktur
 // arr[0],arr[1] ...arr[n] :: Numerische Struktur (0,1,2,3 ...n)
