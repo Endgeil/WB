@@ -13,7 +13,7 @@ let status = true;
 window.addEventListener("load",toggleStatus);
 
 // Klick auf Btn --> Zustand umschalten
-btn.addEventListener("click",toggleStatus,);
+btn.addEventListener("click",toggleStatus);
 
 function toggleStatus() {
     status = !status;
